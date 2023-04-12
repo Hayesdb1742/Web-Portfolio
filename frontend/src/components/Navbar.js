@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import gLogo from '../images/github-mark-white.png'
 function Navbar() {
   return (
     <nav className="navbar">
@@ -24,7 +25,7 @@ function Navbar() {
           </li>
           <li>
             <a href="https://github.com/Hayesdb1742?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img src="/images/facebook-logo.png" alt="Github" width="32" height="32" />
+                <img src={gLogo} width="32" height="32" />
             </a>
           </li>
         </ul>
