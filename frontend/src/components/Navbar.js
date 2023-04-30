@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import gHubLogo from "../images/github-mark-white.png"
+import Resume from "./Resume"
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="container">
-        <Link to="/" className="navbar-brand">My Portfolio</Link>
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/" className="nav-link">Home</Link>
@@ -24,8 +26,11 @@ function Navbar() {
           </li>
           <li>
             <a href="https://github.com/Hayesdb1742?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img src="/images/facebook-logo.png" alt="Github" width="32" height="32" />
+                <img src={gHubLogo} alt="Github" width="32" height="32" />
             </a>
+          </li>
+          <li>
+            <Resume />
           </li>
         </ul>
       </div>
