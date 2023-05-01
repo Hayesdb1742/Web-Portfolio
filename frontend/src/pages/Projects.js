@@ -1,11 +1,17 @@
-import React from 'react';
-function MyParagraph() {
-  console.log('Test')
+import React from "react";
+
+function ProjectList() {
   return (
-    <p style={{ fontSize: '16px', lineHeight: '1.5', color: '#333' }}>
-        This will be a test paragraph.
-    </p>
+    <div>
+      <h2>Projects:</h2>
+      <ul>
+        <li>Machine Learning Projects</li>
+        <li>Electric Vehicle Design</li>
+        <li>Magic Mirror</li>
+        <li>Structured Light Camera</li>
+      </ul>
+    </div>
   );
 }
 
-export default MyParagraph;
+export default ProjectList;

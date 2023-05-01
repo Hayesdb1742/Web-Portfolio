@@ -50,13 +50,14 @@ function App() {
   console.log('App')
   return (
     <div>
-      <Navbar />
-      <h1>Welcome to my site!</h1>
-      <p>This is some example text.</p>
-      <div>
-        <Navbar />
-      </div>
+  <div className="navbar-container">
+    <Navbar />
+  </div>
+  <div className="home-container">
+    <Home />
+  </div>
     </div>
+
   );
 }
 

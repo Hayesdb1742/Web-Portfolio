@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.navbar-container {
+  height: 100px; /* set the height to your desired value */
+}
+
+.home-container {
+  padding-top: 60px; /* set the padding-top to the same value as the navbar height */
+}
+
