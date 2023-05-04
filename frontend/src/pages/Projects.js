@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
-
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import './Projects.css'
 
 
 const projects = [

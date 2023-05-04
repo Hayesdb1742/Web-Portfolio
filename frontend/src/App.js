@@ -4,14 +4,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/contacts';
-import Root from "./routes/root";
+import Slider from './components/Slider'
 import "./index.css";
+import "./App.css"
 import WorkExperience from "./pages/WorkExperience"
 
 
@@ -47,17 +47,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 function App() {
-  console.log('App')
   return (
-    <div>
-  <div className="navbar-container">
-    <Navbar />
-  </div>
-  <div className="home-container">
-    <Home />
-  </div>
+    <div className='app-container'>
+      <Navbar />
+      <div>
+        <Home />
+      </div>
     </div>
-
   );
 }
 

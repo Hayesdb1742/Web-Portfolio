@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from '../components/Navbar'
+
 
 const WorkExperiencePage = () => {
   const workExperiences = [
@@ -24,6 +26,7 @@ const WorkExperiencePage = () => {
 
   return (
     <div>
+      <Navbar/>
       <h1>Work Experience</h1>
       <ul>
         {workExperiences.map((experience, index) => (
