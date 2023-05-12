@@ -76,6 +76,12 @@
     transition: opacity 500ms, transform 500ms;
   }
 
-  .project-list{
+.app-container{
+  .app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
   }
+}
   

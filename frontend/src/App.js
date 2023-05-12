@@ -8,8 +8,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/contacts';
 import Slider from './components/Slider'
+import Contact from './pages/Contact'
 import "./index.css";
 import "./App.css"
 import WorkExperience from "./pages/WorkExperience"

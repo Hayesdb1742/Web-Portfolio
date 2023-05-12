@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css'
 import gHubLogo from "../images/github-mark-white.png"
 import Resume from "./Resume"
@@ -7,23 +7,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
+  const location = useLocation();
   return (
     <nav className="navbar">
       <ul className="nav-menu">
         <li className="nav-item">
-          <Link to="/" className="nav-link"><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></Link>
+          <NavLink to="/" className="nav-NavLink" activeClassName="active"><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/about" className="nav-link">About</Link>
+          <NavLink to="/about" className="nav-NavLink">About</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/projects" className="nav-link">Projects</Link>
+          <NavLink to="/projects" className="nav-NavLink">Projects</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/work-experience" className="nav-link">Work Experience</Link>
+          <NavLink to="/work-experience" className="nav-NavLink">Work Experience</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/contact" className="nav-link">Contact</Link>
+          <NavLink to="/contact" className="nav-NavLink">Contact</NavLink>
         </li>
         <li>
           <a href="https://github.com/Hayesdb1742?tab=repositories" target="_blank" rel="noopener noreferrer">

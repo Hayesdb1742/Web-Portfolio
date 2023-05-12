@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import './Projects.css'
 
@@ -34,16 +34,56 @@ const projects = [
   },
 ];
 
+
+const ProjectList = () => {
+  const sectionRef = useRef(null);
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // trigger enter state for TransitionGroup
+      } else {
+        // trigger exit state for TransitionGroup
+      }
+    });
+  };
+  const observer = new IntersectionObserver(handleIntersect, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // detect intersection when section is 50% visible
+  });
+  useEffect(() => {
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef, observer]);
+  return (
+    <section ref={sectionRef}>
+      <TransitionGroup>
+        {projects.map((project) => (
+          <CSSTransition key={project.id} timeout={500} classNames="fade">
+            <Project project={project} />
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
+    </section>
+  );
+}
+
 function Projects() {
   return (
-    <div>
+    <div className='app-container'>
       <Navbar />
       <div className="project-list">
         <h1>Projects</h1>
-        <TransitionGroup className="project-list">
+        <TransitionGroup>
           {projects.map(project => (
             <CSSTransition key={project.id} timeout={500} classNames="project">
-              <div className="project-card">
+              <div className="project">
                 <img src={project.image} alt={project.title} />
                 <div className="project-info">
                 <h2>{project.title}</h2>

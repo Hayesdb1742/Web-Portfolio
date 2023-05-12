@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
-
+import './Projects.css'
 
 const WorkExperiencePage = () => {
   const workExperiences = [
@@ -25,7 +25,7 @@ const WorkExperiencePage = () => {
   ];
 
   return (
-    <div>
+    <div className='app-container'>
       <Navbar/>
       <h1>Work Experience</h1>
       <ul>
