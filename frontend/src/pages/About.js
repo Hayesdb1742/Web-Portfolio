@@ -4,8 +4,7 @@ import Navbar from '../components/Navbar'
 
 function AboutMe() {
   return (
-    <div>
-      <Navbar />
+    <div id="about">
       <div className="about-me-container">
         <div className="about-me-header">
           <h1>About Me</h1>

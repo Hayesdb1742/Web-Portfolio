@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './Projects.css'
 import Navbar from '../components/Navbar'
+import {useTheme} from 'styled-components';
 function ContactForm() {
+  const theme = useTheme()
+  console.log(theme)
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');

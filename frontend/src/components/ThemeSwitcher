@@ -1,0 +1,16 @@
+import React, { useState } from 'react';
+import './ThemeSwitcher.css';
+
+const ThemeSwitcher = ({ theme, toggleTheme }) => {
+  const handleClick = () => {
+    toggleTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <div className="theme-switcher" onClick={handleClick}>
+      {theme === 'light' ? 'Dark' : 'Light'} Mode
+    </div>
+  );
+};
+
+export default ThemeSwitcher;

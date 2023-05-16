@@ -1,12 +1,13 @@
 
 .navbar {
-  position: sticky;
+  position: fixed;
   height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)); /* white gradient from top to bottom */
 }
 
 .nav-menu {

@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import React, { useRef, useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import './Projects.css'
-
+import darkTheme from '../'
 
 const projects = [
   {
@@ -53,6 +53,7 @@ const ProjectList = () => {
   });
   useEffect(() => {
     if (sectionRef.current) {
+      console.log("Active")
       observer.observe(sectionRef.current);
     }
     return () => {
@@ -62,41 +63,46 @@ const ProjectList = () => {
     };
   }, [sectionRef, observer]);
   return (
-    <section ref={sectionRef}>
-      <TransitionGroup>
-        {projects.map((project) => (
-          <CSSTransition key={project.id} timeout={500} classNames="fade">
-            <Project project={project} />
-          </CSSTransition>
-        ))}
-      </TransitionGroup>
-    </section>
-  );
-}
-
-function Projects() {
-  return (
     <div className='app-container'>
-      <Navbar />
-      <div className="project-list">
-        <h1>Projects</h1>
+      <section ref={sectionRef}>
         <TransitionGroup>
-          {projects.map(project => (
-            <CSSTransition key={project.id} timeout={500} classNames="project">
-              <div className="project">
-                <img src={project.image} alt={project.title} />
-                <div className="project-info">
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <a href={project.link}>View on GitHub</a>
-                </div>
-              </div>
-            </CSSTransition>
+          {projects.map((project) => (
+            <Project Project={project} />
           ))}
         </TransitionGroup>
-      </div>
+      </section>
     </div>
   );
 }
 
-export default Projects;
+function Project({Project}) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="project"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CSSTransition
+        in={isHovered}
+        timeout={300}
+        classNames="project-hover"
+        unmountOnExit
+      >
+        <div className="project-hover-content">
+          <h2>{Project.title}</h2>
+          <p>{Project.description}</p>
+          <img src={Project.image} alt={Project.title} />
+        </div>
+      </CSSTransition>
+
+      <h2>{Project.title}</h2>
+      <p>{Project.description}</p>
+      <img src={Project.image} alt={Project.title} />
+    </div>
+  );
+}
+
+
+export default ProjectList;

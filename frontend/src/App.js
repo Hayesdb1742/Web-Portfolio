@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,7 +13,8 @@ import Contact from './pages/Contact'
 import "./index.css";
 import "./App.css"
 import WorkExperience from "./pages/WorkExperience"
-
+import darkTheme from './themes/dark-theme.js'
+import {ThemeContext, ThemeProvider} from 'styled-components'
 
 const router = createBrowserRouter([
   {
@@ -46,13 +47,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 );
 
+
 function App() {
   return (
-    <div className='app-container'>
+    <div>
       <Navbar />
-      <div>
-        <Home />
+      <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
+        <Home/>
       </div>
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }

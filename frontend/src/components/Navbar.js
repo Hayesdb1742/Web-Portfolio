@@ -15,7 +15,7 @@ function Navbar() {
           <NavLink to="/" className="nav-NavLink" activeClassName="active"><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/about" className="nav-NavLink">About</NavLink>
+          <a onClick={() => document.getElementById("about").scrollIntoView({ behavior: 'smooth' })}>About</a>
         </li>
         <li className="nav-item">
           <NavLink to="/projects" className="nav-NavLink">Projects</NavLink>
@@ -38,5 +38,18 @@ function Navbar() {
     </nav>
   );
 }
+
+function NavigationMenu() {
+  const location = useLocation();
+
+  return (
+    <nav className={location.pathname === '/' ? 'top-nav' : 'side-nav'}>
+      {/* Navigation menu content */}
+    </nav>
+  );
+}
+
+
+
 
 export default Navbar;
