@@ -15,7 +15,7 @@ function ContactForm() {
   };
 
   return (
-    <div className='app-container'>
+    <div className='app-container' id='contact'>
       <Navbar></Navbar>
       <form onSubmit={handleSubmit}>
         <label>

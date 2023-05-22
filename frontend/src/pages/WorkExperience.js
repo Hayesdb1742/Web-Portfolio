@@ -25,7 +25,7 @@ const WorkExperiencePage = () => {
   ];
 
   return (
-    <div className='app-container'>
+    <div className='app-container' id='workExperience'>
       <Navbar/>
       <h1>Work Experience</h1>
       <ul>

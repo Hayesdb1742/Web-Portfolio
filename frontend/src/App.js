@@ -57,6 +57,7 @@ function App() {
       </div>
       <About />
       <Projects />
+      <WorkExperience/>
       <Contact />
     </div>
   );

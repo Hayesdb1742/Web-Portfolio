@@ -63,7 +63,7 @@ const ProjectList = () => {
     };
   }, [sectionRef, observer]);
   return (
-    <div className='app-container'>
+    <div className='app-container' id='projects'>
       <section ref={sectionRef}>
         <TransitionGroup>
           {projects.map((project) => (

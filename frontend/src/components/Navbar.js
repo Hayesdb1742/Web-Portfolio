@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css'
 import gHubLogo from "../images/github-mark-white.png"
@@ -6,36 +6,55 @@ import Resume from "./Resume"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
-function Navbar() {
+
+
+
+const Navbar = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1);
+      const element = document.getElementById(hash);
+      if (element){
+        element.scrollIntoView({behavior:"smooth"});
+      }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange)
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
-      <ul className="nav-menu">
-        <li className="nav-item">
-          <NavLink to="/" className="nav-NavLink" activeClassName="active"><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></NavLink>
-        </li>
-        <li className="nav-item">
-          <a onClick={() => document.getElementById("about").scrollIntoView({ behavior: 'smooth' })}>About</a>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/projects" className="nav-NavLink">Projects</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/work-experience" className="nav-NavLink">Work Experience</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/contact" className="nav-NavLink">Contact</NavLink>
-        </li>
-        <li>
-          <a href="https://github.com/Hayesdb1742?tab=repositories" target="_blank" rel="noopener noreferrer">
-              <img src={gHubLogo} alt="Github" width="32" height="32" />
-          </a>
-        </li>
-        <li>
-          <Resume />
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <nav className="navbar">
+        <ul className="nav-menu">
+          <li className="nav-item">
+            <a href="#about">About</a>
+          </li>
+          <li className="nav-item">
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="nav-item">
+            <a href="#workExperience">Work Experience</a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="https://github.com/Hayesdb1742?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <img src={gHubLogo} alt="Github" width="32" height="32" />
+            </a>
+          </li>
+          <li>
+            <Resume />
+          </li>
+        </ul>
+      </nav>
+      <div className="navbar-spacing"></div>
+    </div>
   );
 }
 
