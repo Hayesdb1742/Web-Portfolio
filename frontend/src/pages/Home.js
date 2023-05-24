@@ -10,19 +10,10 @@ function HomePage() {
   console.log(theme)
   return (
     <div className="homepage">
-      <h1>Welcome to My Portfolio</h1>
-      <p>As a senior computer engineering student, I have gained experience in web development and engineering. Here are some of my skills:</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>C++</li>
-      </ul>
-      <p>Feel free to browse my <Link to="/projects">projects</Link> and <Link to="/resume">resume</Link>.</p>
+      <h1>Hello there, my name is Hayes Bentley</h1>
+      <p> I'm a passionate software developer and problem solver, dedicated to crafting elegant solutions for real-world challenges.  
+        Currently, I am a Software Engineering Intern @ <a href='https://www.spacex.com/' target="_blank">SpaceX</a>, and studying Electrical + Computer Engineering @ <a href='https://ece.osu.edu/ohio-state-electrical-engineering-program/what-ece' target="_blank">The Ohio State University. </a>
+        Go Bucks!</p>
     </div>
   );
 }
