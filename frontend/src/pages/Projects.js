@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: "Machine Learning Projects",
-    description: "Various machine learning projects completed using Python and TensorFlow.",
+    description: "Learned and implemented regressional neural networks and competed in a kaggle compeition.",
     image: "https://via.placeholder.com/150",
     link: "https://github.com/your-username/machine-learning-projects",
   },

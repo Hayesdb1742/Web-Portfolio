@@ -7,20 +7,32 @@ const WorkExperiencePage = () => {
     {
       title: 'Software Engineering Intern (Starship Launch Team)',
       company: 'SpaceX',
-      date: 'June 2020 - Present',
-      description: 'Developed and maintained the company website using React.js and CSS.'
+      date: 'May 2023 - Present',
+      description: ''
     },
     {
-      title: 'Web Designer',
-      company: 'XYZ Corp.',
-      date: 'January 2019 - May 2020',
-      description: 'Created and designed web pages for clients using HTML, CSS, and Bootstrap.'
+      title: 'Data and Automation Engineer',
+      company: 'Tesla',
+      date: 'September 2022 - May 2023',
+      description: 'Created data pipelines and automation procedures for battery cell manufacturing.'
     },
     {
-      title: 'Web Developer Intern',
-      company: 'LMN Tech',
-      date: 'June 2018 - December 2018',
+      title: 'Process, Control, and Automation Engineer',
+      company: 'Marathon Petroleum Corporation',
+      date: 'May 2022 - August 2022',
       description: 'Assisted senior developers in coding, testing, and deploying web applications.'
+    },
+    {
+      title: "Android Development Engineer",
+      company: "Center for Design and Manufacturing Excellence",
+      date: "Sepetember 2021 - May 2022",
+      description: ""  
+    },
+    {
+      title: 'Software Development Intern',
+      company: "Marathon Petroleum Corporation",
+      date: 'May 2021 - August 2021',
+      description: ""
     }
   ];
 
