@@ -20,19 +20,19 @@ const WorkExperiencePage = () => {
       title: 'Process, Control, and Automation Engineer',
       company: 'Marathon Petroleum Corporation',
       date: 'May 2022 - August 2022',
-      description: 'Assisted senior developers in coding, testing, and deploying web applications.'
+      description: 'Upgraded PLCs from GE Series 90-30 to GE Rx3i. Wrote custom control logic for petroleum mixing/blending.'
     },
     {
       title: "Android Development Engineer",
       company: "Center for Design and Manufacturing Excellence",
       date: "Sepetember 2021 - May 2022",
-      description: ""  
+      description: "Created android application interfaced with mobile spectrometer using bluetooth low energy and regressional machine learning to perform higher level accuracy."  
     },
     {
       title: 'Software Development Intern',
       company: "Marathon Petroleum Corporation",
       date: 'May 2021 - August 2021',
-      description: ""
+      description: "Built custom .NET Core web application using C#, SQL Server, and Kendo UI (Javascript).Converted cloud-based Salesforce CRM data into local SQL Server databases."
     }
   ];
 

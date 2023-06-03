@@ -65,11 +65,9 @@ const ProjectList = () => {
   return (
     <div className='app-container' id='projects'>
       <section ref={sectionRef}>
-        <TransitionGroup>
           {projects.map((project) => (
             <Project Project={project} />
           ))}
-        </TransitionGroup>
       </section>
     </div>
   );

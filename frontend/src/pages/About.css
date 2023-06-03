@@ -1,0 +1,21 @@
+.text {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .image {
+    flex: 1;
+    padding: 20px;
+  }
+
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .about-me-content {
+    display: flex;
+    align-items: center;
+  }
