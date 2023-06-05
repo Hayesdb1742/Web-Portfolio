@@ -16,36 +16,6 @@ import WorkExperience from "./pages/WorkExperience"
 import darkTheme from './themes/dark-theme.js'
 import {ThemeContext, ThemeProvider} from 'styled-components'
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path:"/about",
-    element: <About />,
-  },
-  {
-    path:"/contact",
-    element: <Contact />,
-  },
-  {
-    path:"/projects",
-    element: <Projects />
-  },
-  {
-    path:"/work-experience",
-    element: <WorkExperience />
-  }
-]);
-
-
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
 
 
 function App() {

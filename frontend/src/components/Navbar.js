@@ -10,7 +10,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 const Navbar = () => {
-  const location = useLocation();
+  const location = window.location.pathname;
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -58,15 +58,6 @@ const Navbar = () => {
   );
 }
 
-function NavigationMenu() {
-  const location = useLocation();
-
-  return (
-    <nav className={location.pathname === '/' ? 'top-nav' : 'side-nav'}>
-      {/* Navigation menu content */}
-    </nav>
-  );
-}
 
 
 
