@@ -11,8 +11,8 @@ function HomePage() {
   return (
     <div className="homepage">
       <h1>Hello there, my name is Hayes Bentley</h1>
-      <p> I'm a passionate software developer and problem solver, dedicated to crafting elegant solutions for real-world challenges.  
-        Currently, I am a Software Engineering Intern @ <a href='https://www.spacex.com/' target="_blank">SpaceX</a>, and studying Electrical + Computer Engineering @ <a href='https://ece.osu.edu/ohio-state-electrical-engineering-program/what-ece' target="_blank">The Ohio State University. </a>
+      <p> I'm a passionate software developer and problem solver, with a proven track record of solving emerging problems in Manufacturing Automation.  
+        Currently, I am a Automation Engineering Intern @ <a href='https://www.spacex.com/' target="_blank">SpaceX</a>, and studying Electrical + Computer Engineering @ <a href='https://ece.osu.edu/ohio-state-electrical-engineering-program/what-ece' target="_blank">The Ohio State University. </a>
         Go Bucks!</p>
     </div>
   );
