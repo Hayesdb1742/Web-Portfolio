@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,22 +15,60 @@ import "./App.css"
 import WorkExperience from "./pages/WorkExperience"
 import darkTheme from './themes/dark-theme.js'
 import {ThemeContext, ThemeProvider} from 'styled-components'
+import { CSSTransition } from 'react-transition-group';
+import 'animate.css'
 
 
+const App = () => {
+  const [inProp, setInProp] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const nodeRef = useRef(null);
 
-function App() {
+  useEffect(() => {
+    if (isInitialLoad) {
+      // Delay the fade-in effect after 1 second
+      setTimeout(() => {
+        setIsNavbarVisible(false)
+      }, 1000);
+
+
+      setTimeout(() => {
+        setInProp(true);  
+      }, 1000);
+    }
+  }, [isInitialLoad]);
+
   return (
     <div>
-      <Navbar />
-      <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
-        <Home/>
-      </div>
+      <Navbar/>
+        <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
+          <Home/>
+        </div>
       <About />
       <Projects />
       <WorkExperience/>
       <Contact />
     </div>
   );
-}
+};
 
 export default App;
+
+
+// function App() {
+//   return (
+//     <div>
+//       <Navbar />
+//       <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
+//         <Home/>
+//       </div>
+//       <About />
+//       <Projects />
+//       <WorkExperience/>
+//       <Contact />
+//     </div>
+//   );
+// }
+
+// export default App;

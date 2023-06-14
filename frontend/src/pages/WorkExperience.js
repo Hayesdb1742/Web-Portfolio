@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
 import './Projects.css'
+import SectionHeader from '../components/sectionHeader';
+import App from '../App';
+
 
 const WorkExperiencePage = () => {
   const workExperiences = [
@@ -38,8 +41,7 @@ const WorkExperiencePage = () => {
 
   return (
     <div className='app-container' id='workExperience'>
-      <Navbar/>
-      <h1>Work Experience</h1>
+      <SectionHeader title={"Work Experience"}/>
       <ul>
         {workExperiences.map((experience, index) => (
           <li key={index}>
