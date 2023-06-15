@@ -2,7 +2,6 @@ import Navbar from '../components/Navbar';
 import React, { useRef, useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import './Projects.css'
-import darkTheme from '../'
 
 const projects = [
   {

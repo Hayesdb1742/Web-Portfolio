@@ -3,3 +3,8 @@
   animation-duration: 1s;
 }
   
+
+.homeContent{
+  animation: fadeInUp;
+  animation-duration: 1s;
+}

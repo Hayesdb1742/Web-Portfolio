@@ -1,4 +1,4 @@
-import {React, useEffect, useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import gHubLogo from "../images/github-mark-white.png"
 import Resume from "./Resume"
@@ -20,17 +20,17 @@ const Navbar = () => {
     setIsMounted(true)
     setTimeout(() => {
       setShowComponent1(true);
-    }, 1000);
+    }, 250);
 
     // Delay the activation of Component 2 after 2 seconds
     setTimeout(() => {
       setShowComponent2(true);
-    }, 2000);
+    }, 500);
 
     // Delay the activation of Component 3 after 3 seconds
     setTimeout(() => {
       setShowComponent3(true);
-    }, 3000);
+    }, 750);
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1);
       const element = document.getElementById(hash);
@@ -52,11 +52,10 @@ const Navbar = () => {
             <img src={logo} alt="Logo"></img>
           </div>
         <ul className="nav-menu">
-          <CSSTransition in={isMounted} timeout={2000} classNames="fade">
-          <li className="nav-item">
+          {showComponent1 && <li className="nav-item">
             <a href="#about">About</a>
           </li>
-          </CSSTransition>
+          }
           {showComponent1 && <li className="nav-item">
             <a href="#projects">Projects</a>
           </li>}
@@ -82,6 +81,4 @@ const Navbar = () => {
     </div>
   );
 }
-
-
 export default Navbar;

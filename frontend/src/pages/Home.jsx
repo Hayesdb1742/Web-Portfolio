@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext, ThemeProvider, useTheme } from "styled-components";
-import darkTheme from "../themes/dark-theme.js";
+import darkTheme from "../themes/dark-theme.jsx";
 import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
 import "./Home.css";
@@ -9,18 +9,22 @@ import "animate.css";
 
 const HomePage = () => {
   const [showHeader, setShowHeader] = useState(false);
-
+  const [showParagraph, setShowParagraph] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setShowHeader(true);
-    }, 3000);
+    }, 0);
+    setTimeout(() => {
+      setShowParagraph(true)
+    }, 1000)
   }, []);
   return (
     <div className="homepage">
       {showHeader && (
         <h1 className="animatish">Hello there, my name is Hayes Bentley</h1>
       )}
-      <p>
+      {showParagraph &&
+      <p className="homeContent">
         {" "}
         I'm a passionate software developer and problem solver, with a proven
         track record of solving emerging problems in Manufacturing Automation.
@@ -36,7 +40,7 @@ const HomePage = () => {
           The Ohio State University.{" "}
         </a>
         Go Bucks!
-      </p>
+      </p>}
     </div>
   );
 };

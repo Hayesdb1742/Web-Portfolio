@@ -1,9 +1,4 @@
 import React, { useContext, useState, useRef, useEffect } from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import ReactDOM from "react-dom/client";
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,12 +8,9 @@ import Contact from './pages/Contact'
 import "./index.css";
 import "./App.css"
 import WorkExperience from "./pages/WorkExperience"
-import darkTheme from './themes/dark-theme.js'
 import {ThemeContext, ThemeProvider} from 'styled-components'
 import { CSSTransition } from 'react-transition-group';
 import 'animate.css'
-
-
 const App = () => {
   const [inProp, setInProp] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
@@ -40,7 +32,7 @@ const App = () => {
   }, [isInitialLoad]);
 
   return (
-    <div>
+    <div class=''>
       <Navbar/>
         <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
           <Home/>
