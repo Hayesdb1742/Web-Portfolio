@@ -32,7 +32,7 @@ const App = () => {
   }, [isInitialLoad]);
 
   return (
-    <div class=''>
+    <div>
       <Navbar/>
         <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
           <Home/>
