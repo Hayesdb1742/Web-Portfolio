@@ -31,6 +31,13 @@ const projects = [
     image: "https://via.placeholder.com/150",
     link: "https://github.com/Hayesdb1742/Structured_Light_Camera",
   },
+  {
+    id: 5,
+    title: "Agriculture Chemometrical Android App",
+    description: "Developed a android app using Java and Gradle as build tools. Applied machine learning strategies in order to smooth noisy data.",
+    image:"",
+    link: "https://osu.edu"
+  }
 ];
 
 
