@@ -11,4 +11,17 @@
 .homeContent{
   animation: fadeInUp;
   animation-duration: 1s;
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center; /* Adjust as needed */
+}
+
+.text-container{
+  flex:1
+}
+ 
+
+.image-section {
+  flex-shrink: 0; /* Don't shrink the image */
+  /* Add additional styling for image section */
 }

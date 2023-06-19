@@ -32,14 +32,14 @@ const App = () => {
   }, [isInitialLoad]);
 
   return (
-    <div>
+    <div className='container'>
       <Navbar/>
-        <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
+        <div style={{height: "100vh", overflow: "hidden" , paddingTop:'500px'}}>
           <Home/>
         </div>
       <About />
-      <Projects />
       <WorkExperience/>
+      <Projects />
       <Contact />
     </div>
   );

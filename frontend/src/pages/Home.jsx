@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./Home.css";
 import "animate.css";
 import '../index.css'
-import portrait from '../images/hayes_marathon.jpeg'
+import headhsot from '../images/Hayes_Headshot.jpeg'
 
 const HomePage = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -21,15 +21,17 @@ const HomePage = () => {
     }, 1000);
   }, []);
   return (
-    <div className="homepage grid grid-cols-2 gap-4">
-      <div className="p-4">
+    <div className="homepage">
+      <div className="p-4 text-container">
         {showHeader && (
-          <h1 className="animatish text-2xl font-bold mb-2">
-            Hello there, my name is Hayes Bentley
+          <div><h1 className="animatish text-2xl font-bold mb-2">
+            Hello there, my name is 
           </h1>
+          <h1 className="text-7xl font-bold">Hayes Bentley</h1>
+          </div>
         )}
         {showParagraph && (
-          <p className="homeContent bg-red-500 text-white p-4 rounded-lg">
+          <p className="homeContent">
             {" "}
             I'm a passionate software developer and problem solver, with a
             proven track record of solving emerging problems in Manufacturing
@@ -48,8 +50,8 @@ const HomePage = () => {
           </p>
         )}
       </div>
-      <div className="p-4">
-        <img src={portrait} alt="Image" className="rounded-full max-w-full h-auto"/>
+      <div className="p-4 image-section">
+        <img src={headhsot} alt="Image" className="w-64 h-64 rounded-full"/>
       </div>
     </div>
   );
