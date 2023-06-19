@@ -21,7 +21,7 @@ const HomePage = () => {
     }, 1000);
   }, []);
   return (
-    <div className="homepage">
+    <div className="homepage  grid grid-cols-2 gap-4">
       <div className="p-4 text-container">
         {showHeader && (
           <div><h1 className="animatish text-2xl font-bold mb-2">

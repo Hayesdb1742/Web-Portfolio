@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div className='container'>
       <Navbar/>
-        <div style={{height: "100vh", overflow: "hidden" , paddingTop:'500px'}}>
+        <div style={{height: "100vh", overflow: "hidden" , paddingTop:'300px'}}>
           <Home/>
         </div>
       <About />

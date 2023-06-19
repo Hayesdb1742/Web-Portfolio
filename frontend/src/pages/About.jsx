@@ -14,7 +14,7 @@ function AboutMe() {
         <div className="about-me-content">
           <div className="text">
             <p className="intro-text text-lg text-gray-700 mt-4">
-              Hello, my name is Hayes Bentley and I am a innovative, hard-worker, computer engineering student, and a part time caddy. I became interested in software engineering during quarantine
+              Hello, my name is Hayes Bentley and I am a innovative, hard-worker, computer engineering student, and a part time caddy. I became interested in software engineering during the COVID pandemic, and quickly began searching. 
               My passion in engineering started in high school while completing a degree in Integrated Engineering Technology from <a href='https://ncstatecollege.edu/degree-drives-grad-to-automotive-career/' target='_blank'>North Central State College. </a>
               Through various courses in PLC's and microcontrollers, I discovered a passion for software and automation!
             </p>
