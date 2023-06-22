@@ -59,7 +59,7 @@ const WorkExperiencePage = () => {
   const [leadershipSelected, setLeadershipSelected] = useState(false);
 
   return (
-    <div className="app-container" id="workExperience">
+    <div className="" id="workExperience">
       <SectionHeader title={"3. Work Experience"} />
       <div className="flex justify-center mb-4">
         <button onClick= {() => {setWorkSelected(true); setLeadershipSelected(false)}} className="px-4 py-2 rounded-md bg-gray-200 text-gray-700 mr-2 focus:outline-none">

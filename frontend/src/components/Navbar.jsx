@@ -46,8 +46,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div>
-      <nav className="navbar">
+    <div className='navbar'>
+      <nav className="flex items-center justify-between p-4 w-full">
           <div className="navbar-logo">
             <img src={logo} alt="Logo"></img>
           </div>

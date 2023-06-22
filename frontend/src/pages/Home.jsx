@@ -21,22 +21,26 @@ const HomePage = () => {
     }, 1000);
   }, []);
   return (
-    <div className="homepage  grid grid-cols-2 gap-4">
-      <div className="p-4 text-container">
+    <div className="homepage flex flex-row">
+      <div className="p-4 text-container basis-10/12">
         {showHeader && (
-          <div><h1 className="animatish text-2xl font-bold mb-2">
-            Hello there, my name is 
-          </h1>
-          <h1 className="text-7xl font-bold">Hayes Bentley</h1>
+          <div>
+            <h1 className="animatish text-2xl font-bold mb-2">
+              Hello there, my name is
+            </h1>
+            <h1 className="text-7xl font-bold text-white p-16">Hayes Bentley.</h1>
           </div>
         )}
         {showParagraph && (
-          <p className="homeContent">
+          <p className="homeContent text-white">
             {" "}
             I'm a passionate software developer and problem solver, with a
             proven track record of solving emerging problems in Manufacturing
             Automation. Currently, I am a Automation Engineering Intern @{" "}
-            <a href="https://www.spacex.com/" target="_blank" className="hover:italic">
+            <a
+              href="https://www.spacex.com/"
+              target="_blank"
+            >
               SpaceX
             </a>
             , and studying Electrical + Computer Engineering @{" "}
@@ -51,7 +55,7 @@ const HomePage = () => {
         )}
       </div>
       <div className="p-4 image-section">
-        <img src={headhsot} alt="Image" className="w-64 h-64 rounded-full"/>
+        <img src={headhsot} alt="Image" className="rounded-full image" />
       </div>
     </div>
   );

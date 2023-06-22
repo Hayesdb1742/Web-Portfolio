@@ -32,15 +32,25 @@ const App = () => {
   }, [isInitialLoad]);
 
   return (
-    <div className='container'>
-      <Navbar/>
-        <div style={{height: "100vh", overflow: "hidden" , paddingTop:'300px'}}>
-          <Home/>
+    <div
+      id="topLevel"
+      className="bg-gradient-to-r from-red-500 grid items-center justify-center h-max"
+    >
+      <div className="max-w-7xl h-max">
+        <Navbar />
+        <div
+          style={{
+            height: "100vh",
+            overflow: "hidden",
+            paddingTop: "300px",
+          }}
+        >
+          <Home />
         </div>
-      <About />
-      <WorkExperience/>
-      <Projects />
-      <Contact />
+        <About />
+        <WorkExperience />
+        <Projects />
+      </div>
     </div>
   );
 };

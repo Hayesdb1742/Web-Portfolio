@@ -50,10 +50,3 @@ html, body, #root {
   height: 100vh;
 }
 
-.navbar-container {
-  flex: 1;
-}
-.home-container {
-  flex: 1;
-}
-

@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import React, { useRef, useState, useEffect } from "react";
+import Modal from "../components/projectDescription"
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import './Projects.css'
 import SectionHeader from '../components/sectionHeader';
@@ -48,21 +49,39 @@ const projects = [
 
 
 const ProjectList = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setIsModalOpen(false);
+  };
+  
   return (
-    <div className='app-container' id='projects'>
-      <SectionHeader title={"2. Projects"}/>
+    <div className="app-container" id="projects">
+      <SectionHeader title={"2. Projects"} />
       <section className="grid grid-cols-3 gap-4">
-          {projects.map((project) => (
-            <Project Project={project} />
-          ))}
+        {projects.map((project) => (
+          <Project Project={project}/>
+        ))}
+        {/* Render the modal if open */}
+        {isModalOpen && (
+          <Modal project={selectedProject} onClose={closeModal} />
+        )}
       </section>
     </div>
   );
 }
 
 function Project({Project}) {
+  
   return (
-    <div className="flex items-center justify-center bg-gray-200 p-4 rounded-lg shadow-md transition-transform cursor-pointer hover:scale-105">
+    <div className="flex items-center justify-center bg-gray-200 p-4 rounded-lg shadow-md transition-transform cursor-pointer hover:scale-105" onClick={() => openModal({Project})}>
       <div className="w-20 h-20 bg-white rounded-full mr-4 overflow-hidden">
       </div>
       <div>
