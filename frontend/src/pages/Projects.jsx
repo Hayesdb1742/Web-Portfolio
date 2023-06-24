@@ -67,21 +67,23 @@ const ProjectList = () => {
       <SectionHeader title={"2. Projects"} />
       <section className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
-          <Project Project={project}/>
+          <Project Project={project} openModal={openModal} key={project.id}/>
         ))}
         {/* Render the modal if open */}
         {isModalOpen && (
-          <Modal project={selectedProject} onClose={closeModal} />
+          <Modal project={selectedProject} onClose={closeModal}/>
         )}
       </section>
     </div>
   );
 }
 
-function Project({Project}) {
-  
+function Project({Project, openModal}) {
+  const handleClick = () => {
+    openModal(Project)
+  };
   return (
-    <div className="flex items-center justify-center bg-gray-200 p-4 rounded-lg shadow-md transition-transform cursor-pointer hover:scale-105" onClick={() => openModal({Project})}>
+    <div className="flex items-center justify-center bg-gray-200 p-4 rounded-lg shadow-md transition-transform cursor-pointer hover:scale-105" onClick={handleClick}>
       <div className="w-20 h-20 bg-white rounded-full mr-4 overflow-hidden">
       </div>
       <div>

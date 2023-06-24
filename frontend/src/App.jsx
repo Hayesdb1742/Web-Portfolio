@@ -34,9 +34,9 @@ const App = () => {
   return (
     <div
       id="topLevel"
-      className="bg-gradient-to-r from-red-500 grid items-center justify-center h-max"
+      className="container mx-auto bg-gradient-to-r from-red-500 grid items-center justify-center max-w-7xl h-max"
     >
-      <div className="max-w-7xl h-max">
+      <div className="">
         <Navbar />
         <div
           style={{
