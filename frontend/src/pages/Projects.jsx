@@ -51,19 +51,22 @@ const projects = [
 const ProjectList = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);
 
   const openModal = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
+    setIsBlurred(true)
   };
 
   const closeModal = () => {
     setSelectedProject(null);
     setIsModalOpen(false);
+    setIsBlurred(false);
   };
   
   return (
-    <div className="app-container" id="projects">
+    <div className={`app-container ${isBlurred ? 'blur' : ''}`} id="projects">
       <SectionHeader title={"2. Projects"} />
       <section className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
