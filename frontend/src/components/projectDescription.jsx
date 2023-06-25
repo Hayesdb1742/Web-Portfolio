@@ -6,7 +6,7 @@ const Modal = ({project, onClose}) => {
         1: {
           Title: "Magic Mirror",
           Description: "I am in the process of building an interactive mirror built on Raspberry Pi backend bash script and React frontend.",
-          Skills: []
+          Skills: ["React", "Raspberry Pi"]
         },
         2: {
           Title: "Android App",
