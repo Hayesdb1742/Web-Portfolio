@@ -5,27 +5,33 @@ const Modal = ({project, onClose}) => {
     const projectInfo = {
         1: {
           Title: "Magic Mirror",
-          Description: "I am in the process of building an interactive mirror built on Raspberry Pi backend bash script and React frontend."
+          Description: "I am in the process of building an interactive mirror built on Raspberry Pi backend bash script and React frontend.",
+          Skills: []
         },
         2: {
           Title: "Android App",
-          Description: ""
+          Description: "",
+          Skills: ["Java", "Gradle", "Android Studio", "Statistical Modeling"]
         },
         3: {
           Title: "Machine Learning Projects",
-          Description: ""
+          Description: "",
+          Skills: ["Python","PyTorch", "Neural Networks"]
         },
         4: {
           Title: "Structured Light Camera",
-          Description:""
+          Description:"",
+          Skills: ["Python", "Embedded Programming"]
         },
         5: {
           Title: "Electric Vehicle Design",
-          Description: ""
+          Description: "",
+          Skills: []
         },
         6: {
           Title: "From Scratch Computer Build",
-          Description: ""
+          Description: "",
+          Skills: []
         }
     }
   const projectDescription = projectInfo[project.id]
