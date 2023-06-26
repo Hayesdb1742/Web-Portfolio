@@ -1,17 +1,17 @@
 import React from "react";
+import HayesBentleyFinalResume from '../HayesBentleyFinalResume.pdf'
+import { saveAs } from 'file-saver';
+import './Resume.css'
 
-function Resume() {
-  const pdfPath = "../images/Hayes_Bentley_Resume_1-31-2023.pdf"
-
-  function handleClick() {
-    window.open(process.env.PUBLIC_URL + "/" + pdfPath, "_blank");
-  }
-
+const resumeBtn = () => {
+  const handleDownload = () => {
+    saveAs(HayesBentleyFinalResume, 'HayesB_Resume.pdf');
+  };
   return (
     <div>
-      <button onClick={handleClick}>Hayes Bentley Resume</button>
+      <button className= "rounded full bg-gradient-to-r from-red-500 animate-bounce" onClick={handleDownload}>Resume</button>
+      {/* <a href={HayesBentleyFinalResume} download>Download PDF</a> */}
     </div>
   );
 }
-
-export default Resume;
+export default resumeBtn;

@@ -1,0 +1,4 @@
+.modal-container {
+    /* Modal styles */
+    z-index: 10; /* Ensure the modal appears above the blurred content */
+  }

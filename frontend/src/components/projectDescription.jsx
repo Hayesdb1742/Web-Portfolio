@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './projectDescription.css'
 
 const Modal = ({project, onClose}) => {
     const projectInfo = {

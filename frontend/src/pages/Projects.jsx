@@ -51,28 +51,25 @@ const projects = [
 const ProjectList = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isBlurred, setIsBlurred] = useState(false);
 
   const openModal = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
-    setIsBlurred(true)
   };
 
   const closeModal = () => {
     setSelectedProject(null);
     setIsModalOpen(false);
-    setIsBlurred(false);
   };
-  
+  //${isModalOpen ? 'modal-open' : 'test'}`
   return (
-    <div className={`app-container ${isBlurred ? 'blur' : ''}`} id="projects">
+    <div className={`app-container `} id="projects">
       <SectionHeader title={"2. Projects"} />
       <section className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
-          <Project Project={project} openModal={openModal} key={project.id}/>
+          <Project Project={project} openModal={openModal} key={project.id} className="backdrop"/>
         ))}
-        {/* Render the modal if open */}
+        {isModalOpen && <div className="backdrop"></div>}
         {isModalOpen && (
           <Modal project={selectedProject} onClose={closeModal}/>
         )}
