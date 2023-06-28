@@ -18,7 +18,8 @@ const WorkExperiencePage = () => {
         "Implemented SCADA system using Java based Web Server and PLC to provide illustrative example for Starship Stabilization.",
         "Programmed PLC's and control units for automating Starship manufacturing products."
       ],
-      link: "https://www.spacex.com/vehicles/starship/"
+      link: "https://www.spacex.com/vehicles/starship/",
+      skills: ["Python", "SCADA", "PLC", "Embedded Programming", "Power System Design", "Automation and Controls", "MQTT Protocol"]
     },
     {
       title: "Data and Automation Engineer @ Tesla",
@@ -27,7 +28,8 @@ const WorkExperiencePage = () => {
         "Created custom data pipeline to internal MES system using Grpc framework, Python, and Apache Kafka.",
         "Implemented the software architecture for smooth transportation of battery cells to Tesla Manufacturing Sites using Python and restAPI's of ERP."
       ],
-      link: "https://www.tesla.com/giga-texas"
+      link: "https://www.tesla.com/giga-texas",
+      skills: ["Python", "Relational DB (PostgreSQL)", "Trino", "Java", "Manufacturing Automation", "Kafka", "Influx DB"]
     },
     {
       title: "Process, Control, and Automation Engineer @ Marathon Petroleum Corp",
@@ -36,7 +38,8 @@ const WorkExperiencePage = () => {
         "Upgraded PLCs from GE Series 90-30 to GE Rx3i. Wrote custom control logic for petroleum mixing/blending.",
         "Deployed an industrial scale to asphalt facility, using PROFINET connection and correct PLC logic change."
       ],
-      link: "https://www.marathonpetroleum.com/Operations/Midstream/"
+      link: "https://www.marathonpetroleum.com/Operations/Midstream/",
+      skills: ["GE PLC Programming", "Modbus Protocol", "Industrial Automation", "Industrial Network Systems", "Electrical System Design"]
     },
     {
       title: "Android Development Engineer @ Center for Design and Manufacturing Excellence",
@@ -45,7 +48,8 @@ const WorkExperiencePage = () => {
         "Developed an android app using java, xml, and bluetooth low energy driver to connect to mobile spectrometer units.",
         "Collaborated with external clients to gauge end user needs."
       ],
-      link: "https://cdme.osu.edu/industrial-cybersecurity"
+      link: "https://cdme.osu.edu/industrial-cybersecurity",
+      skills: ["Java", "Android Studio", "App Development", "XML", "Git (Version Control)"]
     },
     {
       title: "Software Development Intern @ MPC",
@@ -54,7 +58,8 @@ const WorkExperiencePage = () => {
         "Built custom ASP.NET Core web application using C#, SQL Server, and Kendo UI (Javascript). Converted cloud-based Salesforce CRM data into local SQL Server databases.",
         "Interfaced with end users to identify critical needs of web app, used Agile methods for clear workflow patterns."
       ],
-      link: "https://www.marathonpetroleum.com/Operations/Retail/"
+      link: "https://www.marathonpetroleum.com/Operations/Retail/",
+      skills: ["C#", "ASP .NET", "Javascript", "JQuery", "SQL Server"]
     },
   ];
 
@@ -67,27 +72,31 @@ const WorkExperiencePage = () => {
         "Lead a team of 5 engineers successfully hitting design and production milestones within our schedule",
         "Established end user needs in conjuction with advisors and research partners."
       ],
+      skills:[]
     },
     {
       title: "Diversity, Equity, and Inclusion Team Member",
       company: "Marathon Petroleum Corporation",
       description: [
         "Coordinated actions to "
-      ]
+      ],
+      skills:[]
     },
     {
       title: "Computer Science Teaching Assistant",
       company: "OSU",
       description: [
         ""
-      ]
+      ],
+      skills:[]
     },
     {
       title: "Delivery Coordinator",
       company: "St. Paul Church Food Bank",
       description: [
 
-      ]
+      ],
+      skills:[]
     }
   ];
 
@@ -120,34 +129,33 @@ const WorkExperiencePage = () => {
       <div className="grid">
         <ul>
           <div className="mp-4 flex-direction: columns-1">
-            {workSelected && <div
-              id="logoCollage"
-              className="flex flex-wrap h-1/3"
-            >
-              <div className="w-1/4 md:w-1/4 p-4">
-                <img src={SpaceXLogo} alt="SpaceX Logo"/>
+            {workSelected && (
+              <div id="logoCollage" className="flex flex-wrap h-1/3">
+                <div className="w-1/4 md:w-1/4 p-4">
+                  <img src={SpaceXLogo} alt="SpaceX Logo" />
+                </div>
+                <div className="w-1/4 md:w-1/4 p-4">
+                  <img src={TeslaLogo} alt="SpaceX Logo" />
+                </div>
+                <div className="w-1/4 md:w-1/4 p-4">
+                  <img
+                    src={marathonLogo}
+                    alt="Logo 3"
+                    className="max-w-full h-auto background-image"
+                  />
+                </div>
+                <div className="w-1/4 md:w-1/4 p-4">
+                  <img
+                    src={osuLogo}
+                    alt="Logo 4"
+                    className="max-w-full h-auto"
+                  />
+                </div>
               </div>
-              <div className="w-1/4 md:w-1/4 p-4">
-                <img src={TeslaLogo} alt="SpaceX Logo"/>
-              </div>
-              <div className="w-1/4 md:w-1/4 p-4">
-                <img
-                  src={marathonLogo}
-                  alt="Logo 3"
-                  className="max-w-full h-auto background-image"
-                />
-              </div>
-              <div className="w-1/4 md:w-1/4 p-4">
-                <img
-                  src={osuLogo}
-                  alt="Logo 4"
-                  className="max-w-full h-auto"
-
-                />
-              </div>
-            </div>}
-              {workSelected &&
-                workExperiences.map((experience, index) => (
+            )}
+            {workSelected &&
+              workExperiences.map((experience, index) => (
+                <div>
                   <li key={index}>
                     <a
                       target="_blank"
@@ -162,7 +170,18 @@ const WorkExperiencePage = () => {
                       <li>{experience.description[1]}</li>
                     </ul>
                   </li>
-                ))}
+                  <div className="flex flex-wrap">
+                    {experience.skills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="bg-gray-300 text-gray-800 py-2 px-4 rounded-full m-2"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             {leadershipSelected &&
               leadershipPositions.map((experience, index) => (
                 <li key={index}>
