@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import gHubLogo from "../images/github-mark-white.png"
+import gHubLogo from "../images/github-mark.svg"
 import Resume from "./Resume"
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

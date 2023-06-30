@@ -7,6 +7,27 @@
   animation-duration: 1s;
 }
   
+.container {
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/hayes_cursive.svg');
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.homepage{
+  position: relative;
+  z-index: 1;
+}
 
 .homeContent{
   animation: fadeInUp;

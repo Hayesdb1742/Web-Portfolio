@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div
       id="topLevel"
-      className="container mx-auto bg-gradient-to-r from-red-500 grid items-center justify-center max-w-7xl h-max"
+      className="container mx-auto grid items-center justify-center max-w-7xl h-max"
     >
       <div className="">
         <Navbar />
@@ -56,21 +56,3 @@ const App = () => {
 };
 
 export default App;
-
-
-// function App() {
-//   return (
-//     <div>
-//       <Navbar />
-//       <div style={{height: "100vh", overflow: "hidden" , paddingTop:'70px'}}>
-//         <Home/>
-//       </div>
-//       <About />
-//       <Projects />
-//       <WorkExperience/>
-//       <Contact />
-//     </div>
-//   );
-// }
-
-// export default App;

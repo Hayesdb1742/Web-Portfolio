@@ -29,7 +29,7 @@ const WorkExperiencePage = () => {
         "Implemented the software architecture for smooth transportation of battery cells to Tesla Manufacturing Sites using Python and restAPI's of ERP."
       ],
       link: "https://www.tesla.com/giga-texas",
-      skills: ["Python", "Relational DB (PostgreSQL)", "Trino", "Java", "Manufacturing Automation", "Kafka", "Influx DB"]
+      skills: ["Python", "Relational DB (PostgreSQL)", "Trino DB", "Java", "Manufacturing Automation", "Kafka", "Influx DB"]
     },
     {
       title: "Process, Control, and Automation Engineer @ Marathon Petroleum Corp",

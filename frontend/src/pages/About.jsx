@@ -8,9 +8,7 @@ function AboutMe() {
   return (
     <div id="about">
       <div className="about-me-container">
-        <div className="about-me-header">
-          <SectionHeader title={"1. About Me"}/>
-        </div>
+        <SectionHeader index = {"1."} title={"About Me"}/>
         <div className="about-me-content">
           <div className="text">
             <p className="intro-text text-lg mt-4">
