@@ -9,29 +9,27 @@ function AboutMe() {
     <div id="about">
       <div className="about-me-container">
         <div className="about-me-header">
-          <SectionHeader title={"1. About Me"}/>
+          <SectionHeader title={"1. About Me"} />
         </div>
         <div className="about-me-content">
           <div className="text">
             <p className="intro-text text-lg mt-4">
-              Hello, my name is Hayes Bentley and I am a innovative, hard-worker, computer engineering student, and a part time caddy. I became interested in software engineering during the COVID pandemic, and quickly began searching. 
-              My passion in engineering started in high school while completing a degree in Integrated Engineering Technology from <a href='https://ncstatecollege.edu/degree-drives-grad-to-automotive-career/' target='_blank'>North Central State College. </a>
-              Through various courses in PLC's and microcontrollers, I discovered a passion for software and automation!
+              Hello, my name is Hayes Bentley and I pride myself on being a results-driven engineer. Currently, I am a senior at <a href='https://www.osu.edu/' target='_blank'>The Ohio State University</a>, majoring in Computer Engineering. With a graduation date of December 2023, I am actively seeking full time entry level positions in the software and automation space!
             </p>
-          <div className='image'>
-            <img
-              className="profile-image"
-              src={golfImage}
-              alt="Profile"
-              style={{width: '200px', height: '200px' }} ></img>
-          </div>
+            <div className='image'>
+              <img
+                className="profile-image"
+                src={golfImage}
+                alt="Profile"
+                style={{ width: '200px', height: '200px' }} ></img>
+            </div>
             <p className="text">
-              Being from Central Ohio, I knew from any early age that I wanted to further my academic career at <a href='https://www.cnn.com/2022/06/23/us/ohio-state-university-trademarks-the/index.html' target="_blank" className='text-blue-500 hover:text-pink-500 cursor-pointer'>THE</a> Ohio State University! 
-              Initially, I entered college as a Biomedical Engineering Major, but soon focused my degree towards software and major in Computer Engineering. 
-              In my four years at OSU, I have been fortunate enough to complete four internships, at companies such as SpaceX, <a href='https://www.tesla.com/giga-texas'target='_blank'>Tesla</a>, and Marathon Petroleum! I was the primary student developer on a groundbreaking app used for crop 
-            </p>  
+              After beginning as a Biomedical Engineering Major, I rediscovered my passion for software and began studying and gaining expereince in industry. 
+              In my four years at OSU, I have been fortunate enough to complete four internships, at companies such as<a href='https://www.spacex.com/'target='_blank'>SpaceX</a>, <a href='https://www.tesla.com/giga-texas' target='_blank'>Tesla</a>, and <a href='https://www.marathonpetroleum.com/' target='_blank'>Marathon Petroleum! </a> 
+              I was the primary developer on a groundbreaking app used for real-time crop analysis. Over the course of my undergrad career, I have spent a combined two years of software engineering industry experience!
+            </p>
             <p className="text">
-              On the weekends, you can find me caddying at Muirfield Village Golf Course! As a six year veteran at MVGC, I have worked the Memorial Tournament, working with professionals such as Justin Rose and Cam Smith.
+              On the weekends, you can find me caddying at Muirfield Village Golf Course! As a six year veteran at MVGC, I have worked the Memorial Tournament, working with professionals such as Justin Rose and Cam Smith. I am an avid golfer and will take any chance I can get to hit the links! Combining my love of golf and software, I have a number of projects in the works hoping to disrupt the golf industry (...details coming soon). 
             </p>
           </div>
         </div>
