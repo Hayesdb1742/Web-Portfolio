@@ -62,9 +62,6 @@ const Navbar = () => {
           {showComponent2 && <li className="nav-item">
             <a href="#workExperience">Work Experience</a>
           </li>}
-          {showComponent3 && <li className="nav-item">
-            <a href="#contact">Contact</a>
-          </li>}
           <li>
             <a href="https://github.com/Hayesdb1742?tab=repositories" target="_blank" rel="noopener noreferrer">
                 <img src={gHubLogo} alt="Github" width="32" height="32" />

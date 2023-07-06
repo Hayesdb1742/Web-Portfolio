@@ -8,7 +8,7 @@ import SectionHeader from '../components/sectionHeader';
 const projects = [
   {
     id: 1,
-    title: "Magic Mirror",
+    title: "Smart Mirror",
     description: "Built a smart mirror using a Raspberry Pi and customized modules.",
     image: "https://via.placeholder.com/150",
     link: "https://github.com/Hayesdb1742/Magic-Mirror",
@@ -64,7 +64,7 @@ const ProjectList = () => {
   //${isModalOpen ? 'modal-open' : 'test'}`
   return (
     <div className={`app-container `} id="projects">
-      <SectionHeader title={"2. Projects"} />
+      <SectionHeader title={"3. Projects"} />
       <section className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
           <Project Project={project} openModal={openModal} key={project.id} className="backdrop"/>

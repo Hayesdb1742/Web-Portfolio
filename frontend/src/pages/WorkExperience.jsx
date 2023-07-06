@@ -70,31 +70,38 @@ const WorkExperiencePage = () => {
       date: "January 2023 - Present",
       description: [
         "Lead a team of 5 engineers successfully hitting design and production milestones within our schedule",
-        "Established end user needs in conjuction with advisors and research partners."
+        "Established end user needs in conjuction with advisors and research partners",
+        "Acted as the teams scrum master, allowing the team to stay up to date on tasks using Agile methodolgies"
       ],
-      skills:[]
+      skills:["Project Management", "Scrum Master", "Agile"]
     },
     {
       title: "Diversity, Equity, and Inclusion Team Member",
       company: "Marathon Petroleum Corporation",
+      date: "May 2022 - August 2022",
       description: [
-        "Coordinated actions to "
+        "Coordinated DE&I group efforts to identify potential sources of bias within the workplace",
+        "Held information events for employees to educate on the benefits of a diverse workplace"
       ],
       skills:[]
     },
     {
       title: "Computer Science Teaching Assistant",
       company: "OSU",
+      date: "September 2020 - May 2021",
       description: [
-        ""
+        "Instructed students on the basics of OOP using illustrative examples during my office hour",
+        "Provided students helpful feedback on exams and labs to ensure critical topics were learned."
       ],
-      skills:[]
+      skills:["Object Oriented Programming", "Java"]
     },
     {
       title: "Delivery Coordinator",
       company: "St. Paul Church Food Bank",
+      date: "2015-2022",
       description: [
-
+        "Deliveried groceries to over 100 needy families per week",
+        "Coordinated food storage to best serve community needs"
       ],
       skills:[]
     }
@@ -105,7 +112,7 @@ const WorkExperiencePage = () => {
 
   return (
     <div className="" id="workExperience">
-      <SectionHeader title={"3. Work Experience"} />
+      <SectionHeader title={"2. Work Experience"} />
       <div className="flex justify-center mb-4">
         <button
           onClick={() => {
@@ -141,7 +148,7 @@ const WorkExperiencePage = () => {
                   <img
                     src={marathonLogo}
                     alt="Logo 3"
-                    className="max-w-full h-auto background-image"
+                    className="max-w-full h-auto background-image test"
                   />
                 </div>
                 <div className="w-1/4 md:w-1/4 p-4">
@@ -186,8 +193,11 @@ const WorkExperiencePage = () => {
               leadershipPositions.map((experience, index) => (
                 <li key={index}>
                   <h2 className="text-white">{experience.title}</h2>
+                  <p>{experience.company}</p>
                   <p>{experience.date}</p>
-                  <p>{experience.description}</p>
+                  {experience.description.map((single, index) => (
+                    <p>{single}</p>
+                  ))}
                 </li>
               ))}
           </div>
