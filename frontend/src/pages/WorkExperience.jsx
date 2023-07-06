@@ -112,7 +112,7 @@ const WorkExperiencePage = () => {
 
   return (
     <div className="" id="workExperience">
-      <SectionHeader title={"3. Work Experience"} />
+      <SectionHeader title={"2. Work Experience"} />
       <div className="flex justify-center mb-4">
         <button
           onClick={() => {
@@ -148,7 +148,7 @@ const WorkExperiencePage = () => {
                   <img
                     src={marathonLogo}
                     alt="Logo 3"
-                    className="max-w-full h-auto background-image"
+                    className="max-w-full h-auto background-image test"
                   />
                 </div>
                 <div className="w-1/4 md:w-1/4 p-4">
