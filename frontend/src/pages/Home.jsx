@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./Home.css";
 import "animate.css";
 import '../index.css'
-import headhsot from '../images/Hayes_Headshot1.svg'
+import headshot from '../images/Hayes_Headshot1.svg'
 import cursive from '../images/hayes_cursive.svg'
 
 const HomePage = () => {
@@ -52,9 +52,11 @@ const HomePage = () => {
           </p>
         )}
       </div>
-      <div className="p-4 image-section">
-        <svg src={headshot} alt="Image" className="w-64 h-64 rounded-full"/>
-      </div> 
+      <img
+            src={headshot}
+            alt="Image"
+            className="w-64 h-64 rounded-full float-right"
+          />
     </div>
   );
 };

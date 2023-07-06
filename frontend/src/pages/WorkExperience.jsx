@@ -112,7 +112,7 @@ const WorkExperiencePage = () => {
 
   return (
     <div className="" id="workExperience">
-      <SectionHeader title={"2. Work Experience"} />
+      <SectionHeader index = {"2."} title={"Work Experience"}/>
       <div className="flex justify-center mb-4">
         <button
           onClick={() => {

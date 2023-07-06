@@ -64,7 +64,7 @@ const ProjectList = () => {
   //${isModalOpen ? 'modal-open' : 'test'}`
   return (
     <div className={`app-container `} id="projects">
-      <SectionHeader title={"3. Projects"} />
+      <SectionHeader index = {"3."} title={"Projects"}/>
       <section className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
           <Project Project={project} openModal={openModal} key={project.id} className="backdrop"/>
